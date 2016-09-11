@@ -1,5 +1,4 @@
 class ChordsController < ApplicationController
-
 	def new
 		@chord = Chord.new
 	end
@@ -32,8 +31,7 @@ class ChordsController < ApplicationController
 
 	def show
 		@chord = Chord.find(params[:id])
-		puts "LOL"
-		puts @chord.title
+		@valid_chords = Chord.valid_chords
 	end
 
 	# private methods
@@ -51,5 +49,4 @@ class ChordsController < ApplicationController
   			return nil
   		end
   	end
-
 end

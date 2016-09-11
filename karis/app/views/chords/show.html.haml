@@ -8,6 +8,13 @@
 	%b Uploaded by:
 	= @chord.user.full_name
 
-%p
-	%b Content:
-	= @chord.content
+%pre
+
+	= preserve do
+		= @chord.content
+
+:javascript
+	$(document).ready(function() {
+		var new_content = ChordsUtils.updateContent($("pre").text(), #{@valid_chords});
+		$("pre").html(new_content)
+	});
