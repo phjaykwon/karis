@@ -1,0 +1,9 @@
+= simple_form_for(@chord, :html => {:class => "form-horizontal", :style => "margin: 0 auto; width: 40%;"}) do |f|
+
+    .form-input{:align => :center, :width => "80%"}
+        = f.input :title, :required => true, placeholder: "Title"
+        = f.input :artist_full_name, placeholder: "Artist"
+        = f.input :content, label: "Content"
+        %br
+    .form-actions
+        = f.button :submit
