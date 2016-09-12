@@ -1,12 +1,16 @@
 .footer {
-	position: absolute;
+	position: relative;
 	height: 54px;
-	width: 100%;
+	width: 980px;
 	background-color: #2f323a;
 	color: #c7c7c7;
-	left: 0px;
-	right: 0px;
+	margin-left: auto;
+	margin-right: auto;
 	margin-top: 50px;
+}
+
+.footer-all {
+	width: 100%;
 }
 
 .footer-white {
@@ -41,6 +45,10 @@
 .footer-container {
 	width: 920px;
 }
+
+.footer-container-percent {
+	width: 90%;
+}
 .footer-logo {
 	float: left;
 	display: inline-block;
@@ -53,6 +61,7 @@
 }
 
 .footer-list {
+	padding-top: 20px;
 	float: right;
 	display: inline-block;
 }
