@@ -1,20 +1,72 @@
-%p
-	%b Title:
-	= @chord.title
-%p
-	%b Artist:
-	= @chord.artist.full_name 
-%p
-	%b Uploaded by:
-	= @chord.user.full_name
+.chord-body	
+	.chord-content
+		.header
+			.header-list
+				%li#name
+					= link_to 'Karis', '/'
+				%li
+					= link_to 'Top Chords', '/'
+				%li
+					= link_to 'Favorites', '/'
+				%li
+					= link_to 'Sign In', '/'
 
-%pre
+		.section_top
+			.info
+				.title
+					= @chord.title
+				.artist
+					= @chord.artist.full_name 
+				.uploader
+					Uploader:
+					= @chord.user.full_name
 
-	= preserve do
-		= @chord.content
+			.functions
+				.transpose
+					%ul
+						%ul.function-text
+							Favorite
+						%ul.transpose-item#transpose-item
+							.icon-container
+								=image_tag "favorite.png", class: "icon"
+						%ul.function-text
+							Transpose
+						%ul.transpose-up#transpose-item
+							.icon-container
+								=image_tag "up-arrow.png", class: "icon"
+						%ul.transpose-down#transpose-item
+							.icon-container
+								=image_tag "down-arrow.png", class: "icon"
+						%ul.function-text
+							Font-size
+						%ul.transpose-plus#transpose-item
+							.icon-container
+								=image_tag "plus.png", class: "icon"
+						%ul.transpose-minus#transpose-item
+							.icon-container
+								=image_tag "minus.png", class: "icon"
+
+
+		.main
+			.chordsLeft
+				%pre
+					= preserve do
+						= @chord.content
+
+		.footer.footer-chord
+			.footer-container
+				.footer-logo
+
+				%ul.footer-list
+					%li.footer-list-item
+						= link_to 'About', '/'
+					%li.footer-list-item
+						= link_to 'Blog', '/'
+					%li.footer-list-item
+						= link_to 'Submit', '/chords/new'
 
 :javascript
 	$(document).ready(function() {
 		var new_content = ChordsUtils.updateContent($("pre").text(), #{@valid_chords});
-		$("pre").html(new_content)
+		$("pre").html(new_content);
 	});

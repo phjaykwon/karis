@@ -7,4 +7,12 @@ class Chord < ApplicationRecord
 	def self.valid_chords
 		["A", "B", "C", "D", "G", "Em"] 
 	end 
+
+	def self.search(search)
+	  if search
+	  	self.where("title like ?", "%#{search}%")
+	  else
+	    self.all
+	  end
+	end
 end

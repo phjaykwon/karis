@@ -1,7 +1,33 @@
-%h1{:align => "center"} New Chords
+.header.header-white
+	.header-list
+		%li#name
+			= link_to 'Karis', '/'
+		%li
+			= link_to 'Top Chords', '/'
+		%li
+			= link_to 'Favorites', '/'
+		%li
+			= link_to 'Sign In', '/'
 
-%container{:align => "center", :width => "90%"}
-  = render 'form'
-  %br
-  %div{:align => "center"}
-    = link_to 'Back', chords_path, :style => "width: 40%; margin: 0 auto; text-align: center"
+.title_big
+	Submit New Chords
+
+	.subtitle
+		Add your favorite song on Karis!
+
+
+.container.section_no-top-padding
+	= render 'form'
+
+.footer
+	.footer-container
+		.footer-logo
+
+		%ul.footer-list
+			%li.footer-list-item
+				= link_to 'About', '/'
+			%li.footer-list-item
+				= link_to 'Blog', '/'
+			%li.footer-list-item
+				= link_to 'Submit', '/chords/new'
+				
