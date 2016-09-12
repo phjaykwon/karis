@@ -1,1 +1,3 @@
-<h1>Hello, Chords</h1>
+- @chords.each do |chord|
+      
+    = link_to chord.title, chord_path(:id => chord.id)
