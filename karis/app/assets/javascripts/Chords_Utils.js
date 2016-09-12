@@ -1,6 +1,20 @@
 ChordsUtils = function () {
-    var wrapWords = function(str, tmpl) {
-			return str.replace(/\w+/g, tmpl || "<span>$&</span>");
+    var addSpans = function(line, valid_chords) {
+    	var new_line = "";
+    	var words = line.split(" ");
+
+		for (var i = 0; i < words.length; i++) {
+			var new_word = "";
+			if (words[i].length == 0) {
+				new_word = " ";
+			} else if ($.inArray(words[i], valid_chords) != -1) {
+				new_word = "<span class=\"chord\">" +  words[i] + "</span>"
+			} else {
+				new_word = words[i];
+			}
+			new_line += new_word;
+		}
+    	return new_line;
 	}
 
 	var hasChords = function(line, valid_chords) {
@@ -23,13 +37,21 @@ ChordsUtils = function () {
 		var new_text = "";
 		$.each(lines, function(i, line) {
 			if (hasChords(line, valid_chords)) {
-				line = wrapWords(line);
+				line = addSpans(line, valid_chords);
 			} 				
 			new_text += line + "\n";
 		});
 
 		return new_text;
     }
+    this.transposeChord = function(chord, amount) {
+            var scale = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
+            return chord.replace(/[CDEFGAB]#?/g,
+                  function(match) {
+                        var i = (scale.indexOf(match) + amount) % scale.length;
+                        return scale[ i < 0 ? i + scale.length : i ];
+                  });
+      }
 };
 
 ChordsUtils = new ChordsUtils();
