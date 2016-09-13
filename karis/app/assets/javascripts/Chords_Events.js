@@ -1,5 +1,7 @@
 
 $(document).ready(function(){
+      
+
       $(".transpose-up").on("click",function(){
             $("span.chord").text(function(i,txt) {
                   $(this).text(ChordsUtils.transposeChord(txt, 1));
