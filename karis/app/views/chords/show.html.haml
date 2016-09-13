@@ -11,7 +11,7 @@
 				%li
 					= link_to 'Sign In', '/'
 
-		.section-search
+		.section_search
 			=form_tag(main_index_path, method: :get) do
 				=text_field_tag :search, "", class: 'search-field', placeholder: "I think you need to search for an easier song..."
 				=button_tag 'GO!' , class: 'search-button' , type: :submit
