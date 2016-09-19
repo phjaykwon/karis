@@ -13,7 +13,7 @@ class ChordsController < ApplicationController
 			@artist = Artist.create(first_name: artist_first_name, last_name: artist_last_name)
 		end
 
-		@user = User.create(first_name: "James", last_name: "Hong") #hardcoded
+		@user = User.take #eric jan
 
 		@title = params[:chord][:title]
 		@content = params[:chord][:content]
