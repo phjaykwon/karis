@@ -16,11 +16,11 @@ $(document).ready(function(){
       });
       
       $(".transpose-plus").click(function() {
-            $(".main").css("font-size","+=1");
+            $("pre").css("font-size","+=1");
       });
 
       $(".transpose-minus").click(function() {
-            $(".main").css("font-size","-=1");
+            $("pre").css("font-size","-=1");
       });
 });
 
