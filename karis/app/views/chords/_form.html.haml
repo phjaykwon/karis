@@ -1,9 +1,0 @@
-= simple_form_for(@chord, :html => {:class => "form-horizontal"}) do |f|
-
-    .form-input{:align => :center}
-        = f.input :title, :required => true, placeholder: "Title"
-        = f.input :artist_full_name,:class => 'form-title', placeholder: "Artist"
-        = f.input :content, label: "Content"
-        %br
-    .form-actions
-        = f.submit 'Submit', :class => 'form-submit'

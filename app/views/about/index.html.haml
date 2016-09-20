@@ -1,0 +1,78 @@
+.header.header-white
+	.header-list
+		%li#name
+			= link_to 'Karis', '/'
+		%li
+			= link_to 'Top Chords', '/'
+		%li
+			= link_to 'Favorites', '/'
+		%li
+			= link_to 'Sign In', '/'
+
+=image_tag "sathergate.jpeg", class: "about-hero"
+
+.section.section_vertical-align-middle
+	.title_big.section_no-bottom-padding
+		BETA
+	.subtitle
+		Help us make Karis better! 
+
+	.description
+		If you have any suggestions or questions, feel free to reach out to James at jameshong623@gmail.com!	
+
+.section.section_vertical-align-middle.section_big-top-padding
+	.title_big.section_no-bottom-padding
+		Our Story
+	.subtitle
+		Karis was started out with a simple idea of making music more accessible to all.
+
+	.description
+		We saw that there wasn’t a website where someone anywhere around the world could search for their favorite song in any language. However, we want Karis to be more than just a database of songs. We want to support talented, unknown artists by both raising funds and awareness.
+
+.section.section_vertical-align-middle.section_big-top-padding
+	.title_big.section_no-bottom-padding
+		Our Team
+	.subtitle
+		Lorem Ipsum la la la la la hello there why am I not talking to me.
+
+	.about-container
+		.about-description
+			=image_tag "james.jpeg", class: "about-image"
+			.about-name
+				James Hong
+			.about-title
+				Product/Front-End
+
+		.about-description
+			=image_tag "phil.jpeg", class: "about-image"
+			.about-name
+				Phil Kwon
+			.about-title
+				Backend Development
+
+		.about-description
+			=image_tag "eric.jpeg", class: "about-image"
+			.about-name
+				Eric Jan
+			.about-title
+				Backend Development
+
+.section.section_vertical-align-middle.section_big-top-padding
+	.title_big.section_no-bottom-padding
+		Any Questions?
+	.subtitle
+		You can reach out to us by emailing james@mastaphylus.com
+
+
+
+.footer.footer-white
+	.footer-container
+		.footer-logo
+
+		%ul.footer-list
+			%li.footer-list-item
+				= link_to 'About', '/about'
+			%li.footer-list-item
+				= link_to 'Blog', '/'
+			%li.footer-list-item
+				= link_to 'Submit', '/chords/new'
