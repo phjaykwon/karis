@@ -10,25 +10,29 @@
 }
 
 .about-image {
-	width, height: 200px;
+	width: 200px;
+	height: 200px;
 	border-radius: 50%;
 }
 
 .headshot_james {
-	width, height: 200px;
+	width: 200px;
+	height: 200px;
 	border-radius: 50%;
 	background-image: image-url('james.jpeg');
 }
 
 .headshot_phil {
-	width, height: 200px;
+	width: 200px;
+	height: 200px;
 	border-radius: 50%;
 	background-image: image-url('phil.jpeg');
 }
 
 .headshot_eric {
-	width, height: 200px;
-	border-radius: 50%;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;	
 	background-image: image-url('eric.jpeg');
 }
 
