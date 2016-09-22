@@ -39,7 +39,7 @@ body {
 }
 
 .search-field {
-	border: 1px solid #2f323a;
+	border: 1px solid #fff;
     border-radius: 6px;
     font-size: 16px;
     font-weight: 400;
@@ -50,11 +50,12 @@ body {
 }
 
 .search-button {
-	border: 1px solid #2f323a;
+	border: 1px solid #fff;
 	border-radius: 50%;
 	font-size: 16px;
 	font-weight: 600;
 	height: 42px;
+	color: #2f323a;
 	outline: none;
 	padding: 0 7px;
 	background-color: #fff;
@@ -62,6 +63,7 @@ body {
 }
 
 .search-button:hover {
+	border-color: #e5e5e5;
 	background-color: #e5e5e5;
 	-webkit-transition-duration: .3s;
 
