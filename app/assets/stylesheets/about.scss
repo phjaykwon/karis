@@ -10,11 +10,29 @@
 }
 
 .about-image {
+	width, height: 200px;
 	border-radius: 50%;
-	width: 200px;
 }
 
-.about-name {
+.headshot_james {
+	width, height: 200px;
+	border-radius: 50%;
+	background-image: image-url('james.jpeg');
+}
+
+.headshot_phil {
+	width, height: 200px;
+	border-radius: 50%;
+	background-image: image-url('phil.jpeg');
+}
+
+.headshot_eric {
+	width, height: 200px;
+	border-radius: 50%;
+	background-image: image-url('eric.jpeg');
+}
+
+.about-member {
 	font-size: 22px;
 	color: gray;
 	line-height: 36px;
