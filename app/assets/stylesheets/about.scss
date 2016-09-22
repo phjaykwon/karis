@@ -12,27 +12,20 @@
 .about-image {
 	width: 200px;
 	height: 200px;
+	display: inline-block;
 	border-radius: 50%;
+	background-size: cover;
 }
 
 .headshot_james {
-	width: 200px;
-	height: 200px;
-	border-radius: 50%;
 	background-image: image-url('james.jpeg');
 }
 
 .headshot_phil {
-	width: 200px;
-	height: 200px;
-	border-radius: 50%;
 	background-image: image-url('phil.jpeg');
 }
 
 .headshot_eric {
-	width: 200px;
-	height: 200px;
-	border-radius: 50%;	
 	background-image: image-url('eric.jpeg');
 }
 
