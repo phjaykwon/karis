@@ -16,10 +16,9 @@ class ChordsController < ApplicationController
 		@user = User.take #eric jan
 
 		@title = params[:chord][:title]
-		@video =params[:chord][:video]
 		@content = params[:chord][:content]
 
-		@chord = Chord.new(title: @title, content: @content, video: @video, artist: @artist, user: @user)
+		@chord = Chord.new(title: @title, content: @content, artist: @artist, user: @user)
 		if @chord.save
     		redirect_to @chord
     	else
