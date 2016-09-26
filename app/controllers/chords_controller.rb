@@ -37,7 +37,7 @@ class ChordsController < ApplicationController
 
 	# private methods
 	def chord_params
-    	params.require(:chord).permit(:title, :artist, :video, :user, :content)
+    	params.require(:chord).permit(:title, :artist, :user, :content)
   	end
 
   	def get_split_artist_name(full_name)
