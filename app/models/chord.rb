@@ -11,6 +11,7 @@ class Chord < ApplicationRecord
 		 "A7", "A#7", "B7", "C7", "C#7", "D7", "D#7", "E7", "F7", "F#7", "G7", "G#7", 
 		 "A9", "A#9", "B9", "C9", "C#9", "D9", "D#9", "E9", "F9", "F#9", "G9", "G#9", 
 		 "Aadd9", "A#add9", "Badd9", "Cadd9", "C#add9", "Dadd9", "D#add9", "Eadd9", "Fadd9", "F#add9", "Gadd9", "G#add9",
+		 "Amadd9", "A#madd9", "Bmadd9", "Cmadd9", "C#madd9", "Dmadd9", "D#madd9", "Emadd9", "Fmadd9", "F#madd9", "Gmadd9", "G#madd9", 
 		 "Am6", "A#m6", "Bm6", "Cm6", "C#m6", "Dm6", "D#m6", "Em6", "Fm6", "F#m6", "Gm6", "G#m6", 
 		 "Am7", "A#m7", "Bm7", "Cm7", "C#m7", "Dm7", "D#m7", "Em7", "Fm7", "F#m7", "Gm7", "G#m7", 
 		 "Asus", "A#sus", "Bsus", "Csus", "C#sus", "Dsus", "D#sus", "Esus", "Fsus", "F#sus", "Gsus", "G#sus", 
@@ -21,8 +22,8 @@ class Chord < ApplicationRecord
 
 	def self.search(search)
 	  if search
-	  	puts ("SEARCH")
-	  	self.where("title like ?", "%#{search}%")
+	  		puts ("SEARCH")
+	  		self.where("title like ?", "%#{search}%")
 	  else
 	    self.all
 	  end
