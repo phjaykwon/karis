@@ -7,6 +7,7 @@ class Chord < ApplicationRecord
 	def self.valid_chords
 		["A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", 
 		 "Am", "A#m", "Bm", "Cm", "C#m", "Dm", "D#m", "Em", "Fm", "F#m", "Gm", "G#m", 
+		 "A2", "A#2", "B2", "C2", "C#2", "D2", "D#2", "E2", "F2", "F#2", "G2", "G#2",
 		 "A6", "A#6", "B6", "C6", "C#6", "D6", "D#6", "E6", "F6", "F#6", "G6", "G#6", 
 		 "AM6", "A#M6", "BM6", "CM6", "C#M6", "DM6", "D#M6", "EM6", "FM6", "F#M6", "GM6", "G#M6",
 		 "A7", "A#7", "B7", "C7", "C#7", "D7", "D#7", "E7", "F7", "F#7", "G7", "G#7", 
