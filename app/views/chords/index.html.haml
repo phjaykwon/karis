@@ -12,7 +12,7 @@
 .title_big
 	You have searched for ""
 
-.section_results.section_no-top-padding
+.section_results
 	- @chords.each do |chord|
 		.search_item
 			= link_to chord.title, chord_path(:id => chord.id)
