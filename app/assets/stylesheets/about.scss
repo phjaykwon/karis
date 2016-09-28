@@ -4,7 +4,7 @@
 
 .about-description {
 	display: inline-block;
-	width: 400px;
+	width: 360px;
 	padding-top: 20px;
 
 }
@@ -27,10 +27,15 @@
 
 .headshot_john {
 	background-image: image-url('john.jpeg');
+	background-position: -95px;
 }
 
 .headshot_eric {
 	background-image: image-url('eric.jpeg');
+}
+
+.headshot_kevin {
+	background-image: image-url('kevin.jpeg');
 }
 
 .about-member {
