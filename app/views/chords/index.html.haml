@@ -10,9 +10,7 @@
 			= link_to 'Sign In', '/'
 
 .title_big
-	= @search
-.title_big
-	You have searched for =@search
+	You have searched for #{@search}
 
 .section_results
 	- @chords.each do |chord|
