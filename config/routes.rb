@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
 	get 'about', to: 'about#index'
 
+	get 'blog', to: 'blog#index'
+
 	get 'artist', to: 'artist#index'
 
 	resources :chords
