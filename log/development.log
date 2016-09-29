@@ -22437,3 +22437,46 @@ Migrating to CreateChords (20160920043847)
             FROM sqlite_temp_master
             WHERE name='index_users_roles_on_user_id_and_role_id' AND type='index'
 [0m
+Started GET "/" for ::1 at 2016-09-28 18:03:17 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MainController#index as HTML
+  Rendering main/index.html.haml within layouts/application
+  Rendered main/index.html.haml within layouts/application (11.9ms)
+Completed 200 OK in 840ms (Views: 827.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/main/index?utf8=%E2%9C%93&search=love&button=" for ::1 at 2016-09-28 18:03:23 -0700
+Processing by MainController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"love", "button"=>""}
+Redirected to http://localhost:3000/chords?search=love
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/chords?search=love" for ::1 at 2016-09-28 18:03:23 -0700
+Processing by ChordsController#index as HTML
+  Parameters: {"search"=>"love"}
+  Rendering chords/index.html.haml within layouts/application
+  [1m[36mChord Load (1.5ms)[0m  [1m[34mSELECT "chords".* FROM "chords" WHERE (title ILIKE '%love%')[0m
+  Rendered chords/index.html.haml within layouts/application (23.9ms)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: near "ILIKE": syntax error: SELECT "chords".* FROM "chords" WHERE (title ILIKE '%love%')):
+    13: 	You have searched for #{@search}
+    14: 
+    15: .section_results
+    16: 	- @chords.each do |chord|
+    17: 		.search_item
+    18: 			= link_to chord.title, chord_path(:id => chord.id)
+    19: 
+  
+app/views/chords/index.html.haml:16:in `_app_views_chords_index_html_haml___1873945609128796135_70204322071700'
+  Rendering /Users/James/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/James/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/James/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.2ms)
+  Rendering /Users/James/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/James/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /Users/James/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/James/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/James/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (91.5ms)
