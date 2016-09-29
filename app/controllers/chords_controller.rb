@@ -28,6 +28,7 @@ class ChordsController < ApplicationController
 
 	def index
 		@chords = Chord.search(params[:search])
+		@search = params[:search]
 	end
 
 	def show
