@@ -27,7 +27,7 @@ $(document).ready(function(){
             $("pre").css("font-size","-=1");
       });
 
-      $("span.chord:contains("D")").click(function() {
+      $("span").not(":contains('D')")).click(function() {
             $(this).css("color","red");
       });
 
