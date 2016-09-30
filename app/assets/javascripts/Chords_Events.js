@@ -22,5 +22,14 @@ $(document).ready(function(){
       $(".transpose-minus").click(function() {
             $("pre").css("font-size","-=1");
       });
+
+      $(".transpose-minus").click(function() {
+            $("pre").css("font-size","-=1");
+      });
+
+      $("span:contains("D")").hover(function() {
+            $(this).css("color","red");
+      });
+
 });
 
