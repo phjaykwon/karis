@@ -3,6 +3,7 @@
     .form-input{:align => :center}
         = f.input :title, :required => true, placeholder: "Title"
         = f.input :artist_full_name,:class => 'form-title', placeholder: "Artist"
+        = f.input :video_url ,:class => 'form-title', placeholder: "Youtube URL for the song."
         = f.input :content, label: "Content"
         %br
     .form-actions

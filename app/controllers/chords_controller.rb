@@ -4,22 +4,26 @@ class ChordsController < ApplicationController
 	end
 
 	def create
-		puts params
-		artist_first_name, artist_last_name = get_split_artist_name(params[:chord][:artist_full_name]) # we want to autocomplete this
+		#puts params
+		artist_name = params[:chord][:artist_full_name] # we want to autocomplete this
 
-		@artist = Artist.where(first_name: artist_first_name, last_name: artist_last_name).first()
+		@artist = Artist.where(name: artist_name).first()
 
 		if @artist.nil?
-			@artist = Artist.create(first_name: artist_first_name, last_name: artist_last_name)
+			@artist = Artist.create(name: artist_name)
 		end
 
-		@user = User.take #eric jan
+		@user = current_user
 
 		@title = params[:chord][:title]
+		@video_url =params[:chord][:video_url]
 		@content = params[:chord][:content]
 
-		@chord = Chord.new(title: @title, content: @content, artist: @artist, user: @user)
+		#@chord = Chord.new(title: @title, content: @content, artist: @artist, user: @user)
+		@chord = Chord.new(title: @title, content: @content, video_url: @video_url)
 		if @chord.save
+			@user.chords << @chord
+			@artist.chords << @chord
     		redirect_to @chord
     	else
     		render 'new'
@@ -38,17 +42,9 @@ class ChordsController < ApplicationController
 
 	# private methods
 	def chord_params
-    	params.require(:chord).permit(:title, :artist, :user, :content)
+    	#params.require(:chord).permit(:title, :artist, :user, :content)
+    	params.require(:chord).permit(:title, :artist, :video_url, :user, :content)
+
   	end
 
-  	def get_split_artist_name(full_name)
-  		names = full_name.strip.split(" ")
-  		if names.length == 1
-  			return [names, ""]
-  		elsif names.length >= 2
-  			return [names[0], names[1]]
-  		else
-  			return nil
-  		end
-  	end
 end

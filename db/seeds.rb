@@ -6,4 +6,26 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-@a = User.create! :first_name => 'Eric', :last_name => 'Jan', :email => 'a@test.com', :password => 'apassword', :password_confirmation => 'apassword'
+@aUser = User.create! :first_name => 'Eric', :last_name => 'Jan', :email => 'a@test.com', :password => 'apassword', :password_confirmation => 'apassword'
+@bUser = User.create! :first_name => 'Ericasdf', :last_name => 'Jansadfadsf', :email => 'b@test.com', :password => 'password', :password_confirmation => 'password'
+@aArtist = Artist.create! :name => 'Hillsong'
+@aChord = Chord.create! :title => 'Chords by Hillsong belonging to Eric Jan', :content => 'song text goes here', :video_url => 'url'
+@bChord = Chord.create! :title => 'Chord2', :content => 'other', :video_url => 'urlother'
+@cChord = Chord.create! :title => 'Chord3', :content => 'other', :video_url => 'urlother'
+@dChord = Chord.create! :title => 'Chord4', :content => 'other', :video_url => 'urlother'
+@eChord = Chord.create! :title => 'Chord5', :content => 'other', :video_url => 'urlother'
+#r = Role.add_role()
+
+@aUser.chords << @aChord
+@aUser.chords << @bChord
+@aUser.chords << @cChord
+
+@bUser.chords << @dChord
+@bUser.chords << @eChord
+
+
+@aArtist.chords << @aChord
+@aArtist.chords << @bChord
+@aArtist.chords << @cChord
+@aArtist.chords << @dChord
+@aArtist.chords << @eChord
