@@ -22240,6 +22240,7 @@ app/views/chords/new.html.haml:20:in `_app_views_chords_new_html_haml___38082798
   [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
   [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+<<<<<<< HEAD
 Started GET "/" for ::1 at 2016-09-28 16:41:34 -0700
   [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
   
@@ -30585,6 +30586,46 @@ Started GET "/users" for ::1 at 2016-10-02 19:25:52 -0700
 ActionController::RoutingError (No route matches [GET] "/users"):
   
 actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+=======
+Started GET "/chords/new" for ::1 at 2016-09-20 17:19:52 -0700
+  
+LoadError (cannot load such file -- /Users/James/Desktop/development/karis/karis/config/routes.rb):
+  
+activesupport (5.0.0.1) lib/active_support/dependencies.rb:287:in `load'
+activesupport (5.0.0.1) lib/active_support/dependencies.rb:287:in `block in load'
+activesupport (5.0.0.1) lib/active_support/dependencies.rb:259:in `load_dependency'
+activesupport (5.0.0.1) lib/active_support/dependencies.rb:287:in `load'
+railties (5.0.0.1) lib/rails/application/routes_reloader.rb:40:in `block in load_paths'
+railties (5.0.0.1) lib/rails/application/routes_reloader.rb:40:in `each'
+railties (5.0.0.1) lib/rails/application/routes_reloader.rb:40:in `load_paths'
+railties (5.0.0.1) lib/rails/application/routes_reloader.rb:16:in `reload!'
+railties (5.0.0.1) lib/rails/application/routes_reloader.rb:26:in `block in updater'
+activesupport (5.0.0.1) lib/active_support/file_update_checker.rb:77:in `execute'
+railties (5.0.0.1) lib/rails/application/routes_reloader.rb:7:in `execute'
+railties (5.0.0.1) lib/rails/application/finisher.rb:132:in `block (2 levels) in <module:Finisher>'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:396:in `instance_exec'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:396:in `block in make_lambda'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:169:in `block (2 levels) in halting'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:547:in `block (2 levels) in default_terminator'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:546:in `catch'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:546:in `block in default_terminator'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:170:in `block in halting'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:454:in `block in call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:454:in `each'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:454:in `call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:750:in `_run_run_callbacks'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+activesupport (5.0.0.1) lib/active_support/execution_wrapper.rb:99:in `run!'
+activesupport (5.0.0.1) lib/active_support/reloader.rb:113:in `run!'
+activesupport (5.0.0.1) lib/active_support/execution_wrapper.rb:61:in `block in run!'
+activesupport (5.0.0.1) lib/active_support/execution_wrapper.rb:58:in `tap'
+activesupport (5.0.0.1) lib/active_support/execution_wrapper.rb:58:in `run!'
+activesupport (5.0.0.1) lib/active_support/reloader.rb:59:in `run!'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:10:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+>>>>>>> a90a297681eae42d4e95c8143f798dc9d9d3791f
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
 web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
@@ -30610,6 +30651,7 @@ puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
 puma (3.6.0) lib/puma/server.rb:415:in `process_client'
 puma (3.6.0) lib/puma/server.rb:275:in `block in run'
 puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+<<<<<<< HEAD
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
   Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
@@ -30837,10 +30879,29 @@ Completed 200 OK in 181ms (Views: 176.2ms | ActiveRecord: 0.0ms)
 DEPRECATION WARNING: Passing #original_exception is deprecated and has no effect. Exceptions will automatically capture the original exception. (called from load at /usr/local/bin/rake:23)
   [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
   [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+=======
+  Rendering /Users/James/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/James/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/James/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.3ms)
+  Rendering /Users/James/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/James/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/James/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/James/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/James/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (75.3ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+>>>>>>> a90a297681eae42d4e95c8143f798dc9d9d3791f
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
 Migrating to CreateArtists (20160911010655)
   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
   [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "artists" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+<<<<<<< HEAD
   [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160911010655"]]
   [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
 Migrating to DeviseCreateUsers (20160919043847)
@@ -30849,6 +30910,16 @@ Migrating to DeviseCreateUsers (20160919043847)
   [1m[35m (0.1ms)[0m  [1m[34mselect sqlite_version(*)[0m
   [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
   [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+=======
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160911010655"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to DeviseCreateUsers (20160919043847)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+>>>>>>> a90a297681eae42d4e95c8143f798dc9d9d3791f
             FROM sqlite_master
             WHERE name='index_users_on_email' AND type='index'
             UNION ALL
@@ -30856,18 +30927,32 @@ Migrating to DeviseCreateUsers (20160919043847)
             FROM sqlite_temp_master
             WHERE name='index_users_on_email' AND type='index'
 [0m
+<<<<<<< HEAD
   [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
   [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160919043847"]]
   [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+=======
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160919043847"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+>>>>>>> a90a297681eae42d4e95c8143f798dc9d9d3791f
 Migrating to RolifyCreateRoles (20160919044010)
   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
 DEPRECATION WARNING: Directly inheriting from ActiveRecord::Migration is deprecated. Please specify the Rails release the migration was written for:
 
+<<<<<<< HEAD
   class RolifyCreateRoles < ActiveRecord::Migration[4.2] (called from load at /usr/local/bin/rake:23)
   [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "roles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "resource_type" varchar, "resource_id" integer, "created_at" datetime, "updated_at" datetime)[0m
   [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "users_roles" ("user_id" integer, "role_id" integer)[0m
   [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_roles_on_name" ON "roles" ("name")[0m
   [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+=======
+  class RolifyCreateRoles < ActiveRecord::Migration[4.2] (called from migrate at /Users/James/.rvm/gems/ruby-2.3.0@global/gems/activerecord-5.0.0.1/lib/active_record/migration/compatibility.rb:116)
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "roles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "resource_type" varchar, "resource_id" integer, "created_at" datetime, "updated_at" datetime)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "users_roles" ("user_id" integer, "role_id" integer)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_roles_on_name" ON "roles" ("name")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+>>>>>>> a90a297681eae42d4e95c8143f798dc9d9d3791f
             FROM sqlite_master
             WHERE name='index_roles_on_name' AND type='index'
             UNION ALL
@@ -30876,6 +30961,7 @@ DEPRECATION WARNING: Directly inheriting from ActiveRecord::Migration is depreca
             WHERE name='index_roles_on_name' AND type='index'
 [0m
   [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_roles_on_name_and_resource_type_and_resource_id" ON "roles" ("name", "resource_type", "resource_id")[0m
+<<<<<<< HEAD
   [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_users_roles_on_user_id_and_role_id" ON "users_roles" ("user_id", "role_id")[0m
   [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160919044010"]]
   [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
@@ -30884,6 +30970,16 @@ Migrating to CreateChords (20160920043847)
   [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "chords" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "artist_id" integer, "user_id" integer, "content" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
   [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_chords_on_artist_id" ON "chords" ("artist_id")[0m
   [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+=======
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE  INDEX "index_users_roles_on_user_id_and_role_id" ON "users_roles" ("user_id", "role_id")[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160919044010"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateChords (20160920043847)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "chords" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "artist_id" integer, "user_id" integer, "content" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE  INDEX "index_chords_on_artist_id" ON "chords" ("artist_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+>>>>>>> a90a297681eae42d4e95c8143f798dc9d9d3791f
             FROM sqlite_master
             WHERE name='index_chords_on_artist_id' AND type='index'
             UNION ALL
@@ -30893,6 +30989,7 @@ Migrating to CreateChords (20160920043847)
 [0m
   [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_chords_on_user_id" ON "chords" ("user_id")[0m
   [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160920043847"]]
+<<<<<<< HEAD
   [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
 Migrating to AddVideoUrlToChords (20161003002934)
   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
@@ -30934,6 +31031,13 @@ Migrating to AddNameToArtists (20161003010108)
   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
   [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2016-10-03 02:34:29 UTC], ["updated_at", 2016-10-03 02:34:29 UTC]]
   [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+=======
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2016-09-26 00:21:43 UTC], ["updated_at", 2016-09-26 00:21:43 UTC]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+>>>>>>> a90a297681eae42d4e95c8143f798dc9d9d3791f
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
   [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
             FROM sqlite_master
@@ -30983,7 +31087,11 @@ Migrating to AddNameToArtists (20161003010108)
             FROM sqlite_temp_master
             WHERE name='index_users_on_email' AND type='index'
 [0m
+<<<<<<< HEAD
   [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+=======
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+>>>>>>> a90a297681eae42d4e95c8143f798dc9d9d3791f
             FROM sqlite_master
             WHERE name='index_users_roles_on_user_id_and_role_id' AND type='index'
             UNION ALL
@@ -30991,6 +31099,7 @@ Migrating to AddNameToArtists (20161003010108)
             FROM sqlite_temp_master
             WHERE name='index_users_roles_on_user_id_and_role_id' AND type='index'
 [0m
+<<<<<<< HEAD
   [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
   [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "a@test.com"], ["LIMIT", 1]]
@@ -31167,5 +31276,345 @@ Processing by ChordsController#new as HTML
   Rendered chords/_form.html.haml (60.5ms)
   Rendered chords/new.html.haml within layouts/application (67.1ms)
 Completed 200 OK in 112ms (Views: 93.4ms | ActiveRecord: 0.9ms)
+
+
+=======
+Started GET "/" for ::1 at 2016-09-28 18:03:17 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MainController#index as HTML
+  Rendering main/index.html.haml within layouts/application
+  Rendered main/index.html.haml within layouts/application (11.9ms)
+Completed 200 OK in 840ms (Views: 827.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/main/index?utf8=%E2%9C%93&search=love&button=" for ::1 at 2016-09-28 18:03:23 -0700
+Processing by MainController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"love", "button"=>""}
+Redirected to http://localhost:3000/chords?search=love
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/chords?search=love" for ::1 at 2016-09-28 18:03:23 -0700
+Processing by ChordsController#index as HTML
+  Parameters: {"search"=>"love"}
+  Rendering chords/index.html.haml within layouts/application
+  [1m[36mChord Load (1.5ms)[0m  [1m[34mSELECT "chords".* FROM "chords" WHERE (title ILIKE '%love%')[0m
+  Rendered chords/index.html.haml within layouts/application (23.9ms)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: near "ILIKE": syntax error: SELECT "chords".* FROM "chords" WHERE (title ILIKE '%love%')):
+    13: 	You have searched for #{@search}
+    14: 
+    15: .section_results
+    16: 	- @chords.each do |chord|
+    17: 		.search_item
+    18: 			= link_to chord.title, chord_path(:id => chord.id)
+    19: 
+  
+app/views/chords/index.html.haml:16:in `_app_views_chords_index_html_haml___1873945609128796135_70204322071700'
+  Rendering /Users/James/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/James/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/James/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.2ms)
+  Rendering /Users/James/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/James/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /Users/James/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/James/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/James/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (91.5ms)
+>>>>>>> a90a297681eae42d4e95c8143f798dc9d9d3791f
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+DEPRECATION WARNING: Passing #original_exception is deprecated and has no effect. Exceptions will automatically capture the original exception. (called from load at /usr/local/bin/rake:23)
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateArtists (20160911010655)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "artists" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160911010655"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to DeviseCreateUsers (20160919043847)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160919043847"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to RolifyCreateRoles (20160919044010)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+DEPRECATION WARNING: Directly inheriting from ActiveRecord::Migration is deprecated. Please specify the Rails release the migration was written for:
+
+  class RolifyCreateRoles < ActiveRecord::Migration[4.2] (called from load at /usr/local/bin/rake:23)
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "roles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "resource_type" varchar, "resource_id" integer, "created_at" datetime, "updated_at" datetime)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "users_roles" ("user_id" integer, "role_id" integer)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_roles_on_name" ON "roles" ("name")[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_roles_on_name' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_roles_on_name' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_roles_on_name_and_resource_type_and_resource_id" ON "roles" ("name", "resource_type", "resource_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_users_roles_on_user_id_and_role_id" ON "users_roles" ("user_id", "role_id")[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160919044010"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateChords (20160920043847)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "chords" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "artist_id" integer, "user_id" integer, "content" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE  INDEX "index_chords_on_artist_id" ON "chords" ("artist_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_chords_on_artist_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_chords_on_artist_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_chords_on_user_id" ON "chords" ("user_id")[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160920043847"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddVideoUrlToChords (20161003002934)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "chords" ADD "video_url" varchar[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161003002934"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddNameToUsers (20161003005321)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "first_name" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "last_name" varchar[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161003005321"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to RemoveNamesFromArtists (20161003010021)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aartists" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "aartists" ("id","first_name","last_name","created_at","updated_at")
+                     SELECT "id","first_name","last_name","created_at","updated_at" FROM "artists"[0m
+  [1m[35m (0.9ms)[0m  [1m[35mDROP TABLE "artists"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "artists" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "last_name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "artists" ("id","last_name","created_at","updated_at")
+                     SELECT "id","last_name","created_at","updated_at" FROM "aartists"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aartists"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aartists" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "last_name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aartists" ("id","last_name","created_at","updated_at")
+                     SELECT "id","last_name","created_at","updated_at" FROM "artists"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "artists"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "artists" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "artists" ("id","created_at","updated_at")
+                     SELECT "id","created_at","updated_at" FROM "aartists"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aartists"[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161003010021"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddNameToArtists (20161003010108)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "artists" ADD "name" varchar[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161003010108"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2016-10-03 22:32:17 UTC], ["updated_at", 2016-10-03 22:32:17 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_chords_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_chords_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_chords_on_artist_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_chords_on_artist_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_roles_on_name_and_resource_type_and_resource_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_roles_on_name_and_resource_type_and_resource_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_roles_on_name' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_roles_on_name' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_roles_on_user_id_and_role_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_roles_on_user_id_and_role_id' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "a@test.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "first_name", "last_name") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "a@test.com"], ["encrypted_password", "$2a$11$GWZk2zuV9s2BMVkHIDe8xeSHagV.Q0hqedbZhr/cd2IXaQnZS67Xq"], ["created_at", 2016-10-03 22:32:22 UTC], ["updated_at", 2016-10-03 22:32:22 UTC], ["first_name", "Eric"], ["last_name", "Jan"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "b@test.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "first_name", "last_name") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "b@test.com"], ["encrypted_password", "$2a$11$YMmnyRjnXlOlkoK.T9HINeugGxcgUINsWIPe8Oeo4OqkMDlpHkhZy"], ["created_at", 2016-10-03 22:32:22 UTC], ["updated_at", 2016-10-03 22:32:22 UTC], ["first_name", "Ericasdf"], ["last_name", "Jansadfadsf"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "artists" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", 2016-10-03 22:32:22 UTC], ["updated_at", 2016-10-03 22:32:22 UTC], ["name", "Hillsong"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "chords" ("title", "content", "created_at", "updated_at", "video_url") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Chords by Hillsong belonging to Eric Jan"], ["content", "song text goes here"], ["created_at", 2016-10-03 22:32:22 UTC], ["updated_at", 2016-10-03 22:32:22 UTC], ["video_url", "url"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "chords" ("title", "content", "created_at", "updated_at", "video_url") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Chord2"], ["content", "other"], ["created_at", 2016-10-03 22:32:22 UTC], ["updated_at", 2016-10-03 22:32:22 UTC], ["video_url", "urlother"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "chords" ("title", "content", "created_at", "updated_at", "video_url") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Chord3"], ["content", "other"], ["created_at", 2016-10-03 22:32:22 UTC], ["updated_at", 2016-10-03 22:32:22 UTC], ["video_url", "urlother"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "chords" ("title", "content", "created_at", "updated_at", "video_url") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Chord4"], ["content", "other"], ["created_at", 2016-10-03 22:32:22 UTC], ["updated_at", 2016-10-03 22:32:22 UTC], ["video_url", "urlother"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "chords" ("title", "content", "created_at", "updated_at", "video_url") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Chord5"], ["content", "other"], ["created_at", 2016-10-03 22:32:22 UTC], ["updated_at", 2016-10-03 22:32:22 UTC], ["video_url", "urlother"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "chords" SET "user_id" = ?, "updated_at" = ? WHERE "chords"."id" = ?[0m  [["user_id", 1], ["updated_at", 2016-10-03 22:32:22 UTC], ["id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "chords" SET "user_id" = ?, "updated_at" = ? WHERE "chords"."id" = ?[0m  [["user_id", 1], ["updated_at", 2016-10-03 22:32:22 UTC], ["id", 2]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "chords" SET "user_id" = ?, "updated_at" = ? WHERE "chords"."id" = ?[0m  [["user_id", 1], ["updated_at", 2016-10-03 22:32:22 UTC], ["id", 3]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "chords" SET "user_id" = ?, "updated_at" = ? WHERE "chords"."id" = ?[0m  [["user_id", 2], ["updated_at", 2016-10-03 22:32:22 UTC], ["id", 4]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "chords" SET "user_id" = ?, "updated_at" = ? WHERE "chords"."id" = ?[0m  [["user_id", 2], ["updated_at", 2016-10-03 22:32:22 UTC], ["id", 5]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "chords" SET "artist_id" = ?, "updated_at" = ? WHERE "chords"."id" = ?[0m  [["artist_id", 1], ["updated_at", 2016-10-03 22:32:22 UTC], ["id", 1]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "chords" SET "artist_id" = ?, "updated_at" = ? WHERE "chords"."id" = ?[0m  [["artist_id", 1], ["updated_at", 2016-10-03 22:32:22 UTC], ["id", 2]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "chords" SET "artist_id" = ?, "updated_at" = ? WHERE "chords"."id" = ?[0m  [["artist_id", 1], ["updated_at", 2016-10-03 22:32:22 UTC], ["id", 3]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "chords" SET "artist_id" = ?, "updated_at" = ? WHERE "chords"."id" = ?[0m  [["artist_id", 1], ["updated_at", 2016-10-03 22:32:22 UTC], ["id", 4]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "chords" SET "artist_id" = ?, "updated_at" = ? WHERE "chords"."id" = ?[0m  [["artist_id", 1], ["updated_at", 2016-10-03 22:32:22 UTC], ["id", 5]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for ::1 at 2016-10-03 15:34:09 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MainController#index as HTML
+  Rendering main/index.html.haml within layouts/application
+  Rendered main/index.html.haml within layouts/application (8.2ms)
+Completed 200 OK in 912ms (Views: 894.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-10-03 15:34:13 -0700
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (168.4ms)
+Completed 200 OK in 270ms (Views: 206.2ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-10-03 15:34:24 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pz+HG39/CrAX+md7T+RMWYVDIFmQPVhgEu5kgefPVeOf2LsjE54Xr52an99xosHl48nvPjT+84Am2FwHPLxscw==", "user"=>{"email"=>"a@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "a@test.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2016-10-03 22:34:24 UTC], ["last_sign_in_at", 2016-10-03 22:34:24 UTC], ["current_sign_in_ip", "::1"], ["last_sign_in_ip", "::1"], ["sign_in_count", 1], ["updated_at", 2016-10-03 22:34:24 UTC], ["id", 1]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 161ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2016-10-03 15:34:24 -0700
+Processing by MainController#index as HTML
+  Rendering main/index.html.haml within layouts/application
+  Rendered main/index.html.haml within layouts/application (8.7ms)
+Completed 200 OK in 54ms (Views: 50.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/chords/new" for ::1 at 2016-10-03 15:34:26 -0700
+Processing by ChordsController#new as HTML
+  Rendering chords/new.html.haml within layouts/application
+  Rendered chords/_form.html.haml (15.5ms)
+  Rendered chords/new.html.haml within layouts/application (27.8ms)
+Completed 200 OK in 131ms (Views: 102.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/chords" for ::1 at 2016-10-03 15:34:32 -0700
+Processing by ChordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vDWpMuAFSeFIF8LExER4bYCuzGzMIUDbK0V20dfWfI3mmMOTFOecZWgeAJVuwdCEf9fzFxYaB3jeX5zBIob8mw==", "chord"=>{"title"=>"asdfdsa", "artist_full_name"=>"asdfsd", "video_url"=>"asd", "content"=>"asdfasdga\r\ndas"}, "commit"=>"Submit"}
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? ORDER BY "artists"."id" ASC LIMIT ?[0m  [["name", "asdfsd"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "artists" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", 2016-10-03 22:34:32 UTC], ["updated_at", 2016-10-03 22:34:32 UTC], ["name", "asdfsd"]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "chords" ("title", "content", "created_at", "updated_at", "video_url") VALUES (?, ?, ?, ?, ?)[0m  [["title", "asdfdsa"], ["content", "asdfasdga\r\ndas"], ["created_at", 2016-10-03 22:34:32 UTC], ["updated_at", 2016-10-03 22:34:32 UTC], ["video_url", "asd"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.6ms)[0m  [1m[33mUPDATE "chords" SET "user_id" = ?, "updated_at" = ? WHERE "chords"."id" = ?[0m  [["user_id", 1], ["updated_at", 2016-10-03 22:34:32 UTC], ["id", 6]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "chords" SET "artist_id" = ?, "updated_at" = ? WHERE "chords"."id" = ?[0m  [["artist_id", 2], ["updated_at", 2016-10-03 22:34:32 UTC], ["id", 6]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/chords/6
+Completed 302 Found in 82ms (ActiveRecord: 11.8ms)
+
+
+Started GET "/chords/6" for ::1 at 2016-10-03 15:34:32 -0700
+Processing by ChordsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mChord Load (0.2ms)[0m  [1m[34mSELECT  "chords".* FROM "chords" WHERE "chords"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering chords/show.html.haml within layouts/application
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered chords/show.html.haml within layouts/application (24.9ms)
+Completed 200 OK in 102ms (Views: 93.9ms | ActiveRecord: 0.6ms)
 
 

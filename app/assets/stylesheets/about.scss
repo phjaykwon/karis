@@ -1,25 +1,44 @@
-.about-hero {
-	width: 100%;
-	opacity: 0.9;
-}
-
 .about-container {
 	position: relative;
 }
 
 .about-description {
 	display: inline-block;
-	width: 400px;
+	width: 360px;
 	padding-top: 20px;
 
 }
 
 .about-image {
-	border-radius: 50%;
 	width: 200px;
+	height: 200px;
+	display: inline-block;
+	border-radius: 50%;
+	background-size: cover;
 }
 
-.about-name {
+.headshot_james {
+	background-image: image-url('james.jpeg');
+}
+
+.headshot_phil {
+	background-image: image-url('phil.jpeg');
+}
+
+.headshot_john {
+	background-image: image-url('john.jpeg');
+	background-position: -95px;
+}
+
+.headshot_eric {
+	background-image: image-url('eric.jpeg');
+}
+
+.headshot_kevin {
+	background-image: image-url('kevin.jpeg');
+}
+
+.about-member {
 	font-size: 22px;
 	color: gray;
 	line-height: 36px;

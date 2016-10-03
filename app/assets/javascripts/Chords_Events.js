@@ -22,5 +22,10 @@ $(document).ready(function(){
       $(".transpose-minus").click(function() {
             $("pre").css("font-size","-=1");
       });
+
+      $(".transpose-minus").click(function() {
+            $("pre").css("font-size","-=1");
+      });
+
 });
 

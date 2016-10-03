@@ -1,10 +1,15 @@
 .section {
 	text-align: center;
+	padding: 80px 0px;
+}
+
+.section_index {
+	text-align: center;
+	background-image: image-url('keys.png');
 }
 
 .section_normal-height {
-	min-height: 600px;
-	height: 78vh;
+	height: 85vh;
 }
 
 .section_vertical-align-middle {
@@ -19,6 +24,10 @@
 	padding-bottom: 0px !important;
 }
 
+.section_medium-top-padding {
+	padding-top: 50px !important; 
+}
+
 .section_big-top-padding {
 	padding-top: 100px !important; 
 }
@@ -31,12 +40,13 @@
 }
 
 .section_results {
+	padding: 100px;
 	width: 60%;
 	margin: 0 auto;
 }
 
-.container {
-	padding-top: 50px;
+.container_index {
+	padding-top: 200px;
 }
 
 

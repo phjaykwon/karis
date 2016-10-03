@@ -9,10 +9,10 @@
 		%li
 			= link_to 'Sign In', '/users/sign_in'
 
-.section.section_normal-height.section_vertical-align-middle
-	.container.section_big-top-padding
-		.title_big
-			Thousands of songs are just a search away.
+.section_index.section_normal-height.section_vertical-align-middle
+	.container_index
+		.title_big.title_index.title_white
+			Thousands of songs are just a search away
 
 		=form_tag(main_index_path, method: :get) do
 			=text_field_tag :search, "", class: 'search-field', placeholder: "Search for your favorite song or artist..."
@@ -27,6 +27,6 @@
 			%li.footer-list-item
 				= link_to 'About', '/about'
 			%li.footer-list-item
-				= link_to 'Blog', '/'
+				= link_to 'Blog', '/blog'
 			%li.footer-list-item
 				= link_to 'Submit', '/chords/new'

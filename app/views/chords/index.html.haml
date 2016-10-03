@@ -9,10 +9,10 @@
 		%li
 			= link_to 'Sign In', '/'
 
-.title_big
-	You have searched for ""
+.title_big.section_medium-top-padding
+	You have searched for "#{@search}"
 
-.section_results.section_no-top-padding
+.section_results
 	- @chords.each do |chord|
 		.search_item
 			= link_to chord.title, chord_path(:id => chord.id)
@@ -25,6 +25,6 @@
 			%li.footer-list-item
 				= link_to 'About', '/about'
 			%li.footer-list-item
-				= link_to 'Blog', '/'
+				= link_to 'Blog', '/blog'
 			%li.footer-list-item
 				= link_to 'Submit', '/chords/new'

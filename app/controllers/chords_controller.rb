@@ -32,6 +32,7 @@ class ChordsController < ApplicationController
 
 	def index
 		@chords = Chord.search(params[:search])
+		@search = params[:search]
 	end
 
 	def show
@@ -43,5 +44,7 @@ class ChordsController < ApplicationController
 	def chord_params
     	#params.require(:chord).permit(:title, :artist, :user, :content)
     	params.require(:chord).permit(:title, :artist, :video_url, :user, :content)
+
   	end
+
 end
