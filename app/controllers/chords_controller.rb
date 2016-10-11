@@ -1,6 +1,12 @@
 class ChordsController < ApplicationController
 	def new
-		@chord = Chord.new
+		if current_user == nil
+			#sign_in current_user
+			store_location_for(:user, new_chord_path)
+			redirect_to new_user_session_path
+		else
+			@chord = Chord.new
+		end
 	end
 
 	def create
