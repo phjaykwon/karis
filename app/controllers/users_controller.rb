@@ -10,7 +10,9 @@ class UsersController < ApplicationController
 
 
 	def index
-		@users = User.search(params[:search])
+		#@users = User.search(params[:search])
+		#if current_user == null
+		#	redirect_to new_user_session_path
 	end
 
 	def show 	# modify to fit user
