@@ -3,3 +3,8 @@
 tmp
 tmp/
 tmp/*
+
+
+#sqlite
+db/development.sqlite3
+db/production.sqlite3
