@@ -26,7 +26,7 @@ class Chord < ApplicationRecord
 	def self.search(search)
 	  if search
 	  		puts ("SEARCH")
-	  		self.where("title LIKE ?", "%#{search}%")
+	  		self.where("title ILIKE ?", "%#{search}%")
 	  else
 	    self.all
 	  end
