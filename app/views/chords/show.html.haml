@@ -4,14 +4,25 @@
 	.chord-content
 		.header
 			.header-list
-				%li#name
-					= link_to 'Karis', '/'
-				%li
-					= link_to 'Top Chords', '/'
-				%li
-					= link_to 'Favorites', '/'
-				%li
-					= link_to 'Sign In', '/'
+				-if current_user
+					%li#name
+						= link_to 'Karis', '/'
+					%li
+						= link_to 'Top Chords', '/'
+					%li
+						= link_to 'Favorites', '/'
+					%li
+						= link_to "Sign out", destroy_user_session_path, :method => :delete 
+
+				-else
+					%li#name
+						= link_to 'Karis', '/'
+					%li
+						= link_to 'Top Chords', '/'
+					%li
+						= link_to 'Favorites', '/'
+					%li
+						= link_to 'Sign In', 'users/sign_in'
 
 		.section_search
 			=form_tag(main_index_path, method: :get) do

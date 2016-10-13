@@ -1,83 +1,54 @@
-	#new_user {
-		margin: 0 auto;
-	    width: 660px;
-	    text-align: center;
-	}
+#new_user {
+	margin: 0 auto;
+    width: 660px;
+    text-align: center;
+}
 
 
 
-	#user_email, #user_password, #user_current_password, #user_password_confirmation, #user_first_name, #user_last_name {
-		text-align: left;
-	    margin-left: 20px;
-	    border: 1px solid gray;
-	    border-radius: 7px;
-	    height: 30px;
-	    padding-left: 4px;
-	    width: 300px;
-	    font-size: 14px;
-	    padding: 0px 6px;
-	}
+#user_email, #user_password, #user_current_password, #user_password_confirmation, #user_first_name, #user_last_name {
+	text-align: left;
+    margin-left: 20px;
+    border: 1px solid gray;
+    border-radius: 7px;
+    height: 30px;
+    padding-left: 4px;
+    width: 300px;
+    font-size: 14px;
+    padding: 0px 6px;
+}
 
-	#user_email {
-		margin-left: 154px;
-	}
+#user_email {
+	margin-left: 154px;
+}
 
-	#user_password {
-		margin-left: 121px;
-	}
+#user_password {
+	margin-left: 121px;
+}
 
-	#user_first_name {
-		margin-left: 116px;
-	}
+#user_first_name {
+	margin-left: 116px;
+}
 
-	#user_last_name {
-		margin-left: 118px;
-	}
+#user_last_name {
+	margin-left: 118px;
+}
 
-	#user_current_password {
-		margin-left: 60px;
-	}
+#user_current_password {
+	margin-left: 60px;
+}
 
-	.form-inputs {
-		width: 550px;
-		margin: 0 auto;
-	}
+.form-inputs {
+	width: 660px;
+	margin: 0 auto;
+}
 
-	.form-actions {
-		width: 600px;
-		margin: 0 auto;
-		text-align: center;
-	}
+.form-actions {
+	width: 600px;
+	margin: 0 auto;
+	text-align: center;
+}
 
-	abbr[title="required"] {
-	  display: none;
-	}
-
-	.button-button {
-		height: 32px;
-		display: inline-block;
-		vertical-align: middle;	
-		padding: 0px 15px;
-		color: black;
-		text-decoration: none;
-		cursor: pointer;
-		text-transform: uppercase;
-		font-weight: 500;
-		font-size: 15px;
-		background-color: white; 
-		letter-spacing: 1px;
-		margin-left: 40px;
-	}
-
-	.button-button a {
-		display: inline;
-		text-decoration: none;
-		color: #c7c7c7;
-		font-weight: 400;
-	}
-
-	.button-button:hover {
-		color: #e5e5e5;
-		-webkit-transition-duration: .3s;
-
-	}
+abbr[title="required"] {
+  display: none;
+}

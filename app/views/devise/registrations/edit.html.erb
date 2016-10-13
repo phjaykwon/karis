@@ -1,4 +1,6 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<%= render "main/header" %>
+
+<div class="title_big title_user">Edit <%= resource_name.to_s.humanize %></div>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= f.error_notification %>
@@ -10,13 +12,13 @@
       <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
     <% end %>
 
-    <%= f.input :password, autocomplete: "off", hint: "leave it blank if you don't want to change it", required: false %>
+    <%= f.input :password, autocomplete: "off", hint: "(leave&nbsp;blank&nbsp;if&nbsp;you&nbsp;don't&nbsp;want&nbsp;to&nbsp;change&nbsp;it)".html_safe, required: false %>
     <%= f.input :password_confirmation, required: false %>
-    <%= f.input :current_password, hint: "we need your current password to confirm your changes", required: true %>
+    <%= f.input :current_password, hint: "(We&nbsp;need&nbsp;your&nbsp;current&nbsp;password&nbsp;to&nbsp;confirm&nbsp;your&nbsp;changes)".html_safe, required: true %>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Update" %>
+    <%= f.submit 'Update', :class => 'form-submit' %>
   </div>
 <% end %>
 

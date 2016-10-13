@@ -1,13 +1,4 @@
-.header.header-white
-	.header-list
-		%li#name
-			= link_to 'Karis', '/'
-		%li
-			= link_to 'Top Chords', '/'
-		%li
-			= link_to 'Favorites', '/'
-		%li
-			= link_to 'Sign In', '/'
+=render "main/header"
 
 
 .section.section_vertical-align-middle
@@ -40,14 +31,4 @@
 				Here are some words. Blah blah blah. I don't know what I'm writing really.Here are some words. Blah blah blah. I don't know what I'm writing really.Here are some words. Blah blah blah. I don't know what I'm writing really.
 
 
-.footer.footer-white
-	.footer-container
-		.footer-logo
-
-		%ul.footer-list
-			%li.footer-list-item
-				= link_to 'About', '/about'
-			%li.footer-list-item
-				= link_to 'Blog', '/blog'
-			%li.footer-list-item
-				= link_to 'Submit', '/chords/new'
+=render "main/footer"

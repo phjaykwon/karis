@@ -1,4 +1,6 @@
-<h2>Change your password</h2>
+<%= render "main/header" %>
+
+<div class="title_big title_user">Change Your Password</div>
 
 <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
   <%= f.error_notification %>

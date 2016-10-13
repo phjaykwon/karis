@@ -45,10 +45,10 @@ h1 {
 	text-align: left;
 	padding-bottom: 10px;
 	font-weight: 600;
-	width: 660px;
+	width: 520px;
 }
 
-#chord_title, #chord_artist_full_name {
+#chord_title, #chord_artist_full_name, #chord_video_url {
 	text-align: left;
     margin-left: 20px;
     border: 1px solid gray;
@@ -61,7 +61,11 @@ h1 {
 }
 
 #chord_title {
-	margin-left: 120px;
+	margin-left: 131px;
+}
+
+#chord_video_url {
+	margin-left: 89px;
 }
 
 #chord_content {
@@ -77,7 +81,8 @@ h1 {
 
 
 .form-submit {	
-	width: 120px;
+	padding: 0px 20px;
+	margin: 16px 0px;
 	height: 32px;
 	cursor: pointer;
 	text-transform: uppercase;
