@@ -197,6 +197,19 @@ h1 {
 	font-weight: 400;
 }
 
+.video_url {
+	float: left;
+	text-decoration: underline;
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: 100;
+}
+
+.video_url a { 
+	color: #66b2ff;
+	font-weight: 500;
+}
+
 .chordsLeft {
 	padding-top: 20px;
 	text-align: left;

@@ -22,7 +22,7 @@
 					%li
 						= link_to 'Favorites', '/'
 					%li
-						= link_to 'Sign In', 'users/sign_in'
+						= link_to 'Sign In', '../users/sign_in'
 
 		.section_search
 			=form_tag(main_index_path, method: :get) do
@@ -37,6 +37,8 @@
 					= @chord.artist.name 
 				.uploader
 					= @chord.user.full_name
+				.video_url
+					= link_to "Click here for the link to the video", @chord.video_url, target: "_blank"
 
 			.functions
 				.transpose
