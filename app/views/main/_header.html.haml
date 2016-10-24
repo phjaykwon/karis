@@ -8,6 +8,8 @@
             %li
                 = link_to 'Favorites', '/'
             %li
+                = link_to "My Chords", '/my_chords'
+            %li
                 = link_to "Sign out", destroy_user_session_path, :method => :delete 
 
         -else
