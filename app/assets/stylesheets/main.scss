@@ -125,6 +125,23 @@ body {
 	color: #2f323a;
 }
 
+.search_actions {
+	padding-top: 5px;
+	line-height: 20px;
+}
+
+.search_actions a {
+
+}
+
+.link_red {
+	display: inline-block;
+}
+
+.link_red a {
+	color: red;
+}
+
 a {
 	text-decoration: none;
 	font-family: helvetica, arial, sans-serif;
