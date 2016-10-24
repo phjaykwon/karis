@@ -1,6 +1,6 @@
-= content_for(:title, @chord.title + " by " + @chord.artist.full_name + " @ karisapp.herokuapp.com")
+= content_for(:title, @chord.title + " by " + @chord.artist.name + " @ karisapp.herokuapp.com")
 
-.chord-body	
+.chord-body
 	.chord-content
 		.header
 			.header-list
@@ -12,7 +12,7 @@
 					%li
 						= link_to 'Favorites', '/'
 					%li
-						= link_to "Sign out", destroy_user_session_path, :method => :delete 
+						= link_to "Sign out", destroy_user_session_path, :method => :delete
 
 				-else
 					%li#name
@@ -34,7 +34,7 @@
 				.title
 					= @chord.title
 				.artist
-					= @chord.artist.name 
+					= @chord.artist.name
 				.uploader
 					= @chord.user.full_name
 				.video_url
