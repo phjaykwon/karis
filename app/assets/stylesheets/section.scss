@@ -8,6 +8,10 @@
 	background-image: image-url('keys.png');
 }
 
+.section_small {
+	padding: 40px 0px;
+}
+
 .section_normal-height {
 	height: 85vh;
 }
@@ -40,6 +44,7 @@
 }
 
 .section_results {
+	text-align: left;
 	padding: 100px;
 	width: 60%;
 	margin: 0 auto;
