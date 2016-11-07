@@ -14,6 +14,7 @@ class FavoritesController < ApplicationController
 			if @favorite.save
 				@user.favorites << @favorite
     		end
+    	end
 	end
 
 	def index
