@@ -1,5 +1,6 @@
 class User < ApplicationRecord
 	has_many :chords #each user has chords
+    has_many :favorites
 
 	#enum role: [:admin, :member, :lurker] us, people signed in, people not signed in
 
