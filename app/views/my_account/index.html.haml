@@ -1,0 +1,14 @@
+=render "main/header"
+
+.title_big.section_medium-top-padding
+	Your Account
+
+	= @user
+
+
+.section_results
+	= link_to "View my chords", "/my_chords"
+	= link_to "View my account details", "/users/edit"
+	= link_to "Change password", "/users/password/edit"
+
+=render "main/footer"

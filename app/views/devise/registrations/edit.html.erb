@@ -1,4 +1,4 @@
-<%= render "main/header" %>
+<%= render "main/header-black" %>
 
 <div class="title_big title_user">Edit <%= resource_name.to_s.humanize %></div>
 
@@ -14,7 +14,7 @@
 
     <%= f.input :password, autocomplete: "off", hint: "(leave&nbsp;blank&nbsp;if&nbsp;you&nbsp;don't&nbsp;want&nbsp;to&nbsp;change&nbsp;it)".html_safe, required: false %>
     <%= f.input :password_confirmation, required: false %>
-    <%= f.input :current_password, hint: "(We&nbsp;need&nbsp;your&nbsp;current&nbsp;password&nbsp;to&nbsp;confirm&nbsp;your&nbsp;changes)".html_safe, required: true %>
+    <%= f.input :current_password, required: true %>
   </div>
 
   <div class="form-actions">
@@ -22,8 +22,9 @@
   </div>
 <% end %>
 
-<h3>Unhappy?</h3>
+<div class="section_more">
+  <h3>Unhappy?</h3>
 
-<p><%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+  <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %>
 
-<%= link_to "Back", :back %>
+</div>

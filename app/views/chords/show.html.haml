@@ -1,35 +1,13 @@
 = content_for(:title, @chord.title + " by " + @chord.artist.name + " @ karisapp.herokuapp.com")
 
 .chord-body
+	=render "main/header-black"
+
 	.chord-content
-		.header
-			.header-list
-				-if current_user
-					%li#name
-						= link_to 'Karis', '/'
-					%li
-						= link_to 'Top Chords', '/'
-					%li
-						= link_to 'Favorites', '/'
-					%li
-						= link_to "My Chords", '/my_chords'
-					%li
-						= link_to "Sign out", destroy_user_session_path, :method => :delete
-
-				-else
-					%li#name
-						= link_to 'Karis', '/'
-					%li
-						= link_to 'Top Chords', '/'
-					%li
-						= link_to 'Favorites', '/'
-					%li
-						= link_to 'Sign In', '../users/sign_in'
-
 		.section_search
 			=form_tag(main_index_path, method: :get) do
 				=text_field_tag :search, "", class: 'search-field-black', placeholder: "I think you need to search for an easier song..."
-				=button_tag 'GO!' , class: 'search-button-black' , type: :submit
+				=button_tag 'GO' , class: 'search-button-black' , type: :submit
 
 		.section_top
 			.info
@@ -74,17 +52,17 @@
 					= preserve do
 						= @chord.content
 
-		.footer.footer-chord
-			.footer-container
-				.footer-logo
+	.footer.footer-chord
+		.footer-container
+			.footer-logo
 
-				%ul.footer-list
-					%li.footer-list-item
-						= link_to 'About', '/about'
-					%li.footer-list-item
-						= link_to 'Blog', '/blog'
-					%li.footer-list-item
-						= link_to 'Submit', '/chords/new'
+			%ul.footer-list
+				%li.footer-list-item
+					= link_to 'About', '/about'
+				%li.footer-list-item
+					= link_to 'Blog', '/blog'
+				%li.footer-list-item.white
+					= link_to 'Submit', '/chords/new'
 
 :javascript
 	$(document).ready(function() {
