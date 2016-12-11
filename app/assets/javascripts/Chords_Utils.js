@@ -66,5 +66,5 @@
                         var i = (scale.indexOf(match) + amount) % scale.length;
                         return scale[ i < 0 ? i + scale.length : i ];
                   });
-      }
+    }
 })(window.ChordsUtils = window.ChordsUtils || {}, jQuery);

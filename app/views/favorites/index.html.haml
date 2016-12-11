@@ -1,0 +1,12 @@
+.title_big.section_medium-top-padding
+	Showing favorite chords...
+
+.section_results
+	- @chords.each do |chord|
+		.search_item
+			= link_to chord.title, chord_path(:id => chord.id)
+			by
+			= link_to chord.artist.name, chord_path(:id => chord.id)
+
+
+=render "main/footer"

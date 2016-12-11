@@ -11,7 +11,9 @@ Rails.application.routes.draw do
 
 	resources :chords
 
-  get 'my_chords', to: 'my_chords#index'
+  	get 'my_chords', to: 'my_chords#index'
+
+  	get 'favorites', to: 'favorites#index'
 
   get 'my_account', to: 'my_account#index'
 

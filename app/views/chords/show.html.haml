@@ -23,11 +23,23 @@
 			.functions
 				.transpose
 					%ul
-						%ul.function-text
-							Favorite
-						%ul.transpose-item#transpose-item
-							.icon-container
-								=image_tag "favorite.png", class: "icon"
+						-if @chord.is_favorited(current_user)
+							%ul.function-text
+								Un-Favorite
+							%ul.transpose-item#transpose-item
+								.icon-container
+									=image_tag "favorite.png", class: "icon"
+							-if :onclick
+								= @chord.remove_favorite(current_user)
+						-else
+							%ul.function-text
+								Favorite
+							%ul.transpose-item#transpose-item
+								.icon-container
+									=image_tag "favorite.png", class: "icon"
+							-if :onclick
+								= @chord.create_favorite(current_user)
+
 						%ul.function-text
 							Transpose
 						%ul.transpose-up#transpose-item
@@ -36,6 +48,7 @@
 						%ul.transpose-down#transpose-item
 							.icon-container
 								=image_tag "down-arrow.png", class: "icon"
+								
 						%ul.function-text
 							Font-size
 						%ul.transpose-plus#transpose-item

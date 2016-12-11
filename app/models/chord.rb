@@ -31,4 +31,27 @@ class Chord < ApplicationRecord
 	    self.all
 	  end
 	end
+
+	def is_favorited(current_user)
+		@user = current_user
+		if @user == nil
+			return false
+		end
+		@favorite = Favorite.where(chord_id: id, user_id: @user.id).first()
+		return @favorite != nil
+	end
+
+	def create_favorite(current_user)
+		@user = current_user
+		@favorite = Favorite.create(user: @user, chord_id: id)
+	end
+
+	def remove_favorite(current_user)
+		@user = current_user
+		if @user == nil
+			return
+		end
+		@favorite = Favorite.where(chord_id: id, user_id: @user.id).first()
+		Favorite.destroy(@favorite)
+	end
 end
