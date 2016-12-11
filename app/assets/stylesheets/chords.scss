@@ -4,7 +4,7 @@
 
 .chord-body {
 	width: 100%;
-	background-color: #f6f9f8;
+/*	background-color: #f6f9f8; changing it to ads if needed*/ 
 }
 
 .chord-content {
@@ -42,56 +42,68 @@ h1 {
 
 .input {
 	display: inline-block;
-	text-align: left;
-	padding-bottom: 10px;
-	font-weight: 600;
-	width: 520px;
+    text-align: left;
+    padding-bottom: 10px;
+    font-weight: 500;
+    width: 480px;
 }
 
 #chord_title, #chord_artist_full_name, #chord_video_url {
+	display: block;
 	text-align: left;
-    margin-left: 20px;
+	margin-top: 4px;
     border: 1px solid gray;
-    border-radius: 7px;
-    height: 30px;
+    border-radius: 5px;
+    height: 38px;
     padding-left: 4px;
-    width: 300px;
+    width: 666px;
     font-size: 14px;
     padding: 0px 6px;
-}
-
-#chord_title {
-	margin-left: 131px;
-}
-
-#chord_video_url {
-	margin-left: 89px;
+    font-weight: 100;
 }
 
 #chord_content {
-	width: 660px;
+	width: 666px;
 	height: 400px;
 	font-size: 14px;
 	margin-top: 10px;
 	border: 1px solid gray;
-    border-radius: 7px;
+    border-radius: 5px;
     text-align: left;
     padding: 6px;
 }
 
 
 .form-submit {	
-	padding: 0px 20px;
-	margin: 16px 0px;
-	height: 32px;
-	cursor: pointer;
-	text-transform: uppercase;
-	font-weight: 500;
-	font-size: 15px;
-	background-color: white; 
-	letter-spacing: 1px;
-	border: 1px solid gray;
-	border-radius: 6px;
+	background-color: #2f323a;
+    padding: 0px;
+    margin: 20px 0px;
+    height: 40px;
+    color: white;
+    cursor: pointer;
+    width: 480px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    border: 0px;
+}
+
+.form-submit_chords {	
+	background-color: #2f323a;
+    padding: 0px;
+    margin: 20px 0px;
+    height: 40px;
+    color: white;
+    cursor: pointer;
+    width: 680px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    border: 0px;
 }
 
 .form-submit:hover {
@@ -142,12 +154,13 @@ h1 {
 
 .icon {
 	display: inline-block;
-	height: 16px;
+	height: 18px;
 	padding: 4px;
 	opacity: .8;
 }
 
 .function-text {
+	font-size: 12px;
 	display: inline-block;
 	font-weight: 500;
 	vertical-align: text-bottom;
@@ -155,10 +168,10 @@ h1 {
 }
 
 .icon-container {
-	border: 2px solid gray;
-	height: 24px;
+	height: 26px;
+	padding: 1px;
     display: inline-block;
-    background-color: #eff7ff;
+    background-color: #c7c7c7;
     border-radius: 25px 25px 25px 25px;
     cursor: pointer; cursor: hand;
 }

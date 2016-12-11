@@ -7,7 +7,7 @@
 	- @chords.each do |chord|
 		.search_item
 			= chord.title
-			by
+			\-
 			= chord.artist.name
 			.search_actions
 				= link_to 'View', chord_path(:id => chord.id)

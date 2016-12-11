@@ -1,6 +1,6 @@
 #new_user {
 	margin: 0 auto;
-    width: 660px;
+    width: 680px;
     text-align: center;
 }
 
@@ -8,45 +8,32 @@
 
 #user_email, #user_password, #user_current_password, #user_password_confirmation, #user_first_name, #user_last_name {
 	text-align: left;
-    margin-left: 20px;
+    height: 40px;
+    margin-top: 6px;
     border: 1px solid gray;
-    border-radius: 7px;
-    height: 30px;
-    padding-left: 4px;
-    width: 300px;
+    border-radius: 6px;
+    width: 466px;
+    display: block;
     font-size: 14px;
     padding: 0px 6px;
 }
 
-#user_email {
-	margin-left: 154px;
-}
-
-#user_password {
-	margin-left: 121px;
-}
-
-#user_first_name {
-	margin-left: 116px;
-}
-
-#user_last_name {
-	margin-left: 118px;
-}
-
-#user_current_password {
-	margin-left: 60px;
-}
-
 .form-inputs {
-	width: 660px;
-	margin: 0 auto;
+	width: 480px;
+    margin: 0 auto;
 }
 
 .form-actions {
-	width: 600px;
-	margin: 0 auto;
-	text-align: center;
+	width: 680px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hint {
+	padding-left: 6px;
+    font-size: 14px;
+    font-style: italic;
+    float: right;
 }
 
 abbr[title="required"] {
