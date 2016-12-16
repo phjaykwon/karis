@@ -29,16 +29,12 @@
 							%ul.transpose-item#transpose-item
 								.icon-container
 									=image_tag "favorite.png", class: "icon"
-							-if :onclick
-								= @chord.remove_favorite(current_user)
 						-else
 							%ul.function-text
 								Favorite
 							%ul.transpose-item#transpose-item
 								.icon-container
 									=image_tag "favorite.png", class: "icon"
-							-if :onclick
-								= @chord.create_favorite(current_user)
 
 						%ul.function-text
 							Transpose
@@ -65,17 +61,7 @@
 					= preserve do
 						= @chord.content
 
-	.footer.footer-chord
-		.footer-container
-			.footer-logo
-
-			%ul.footer-list
-				%li.footer-list-item
-					= link_to 'About', '/about'
-				%li.footer-list-item
-					= link_to 'Blog', '/blog'
-				%li.footer-list-item.white
-					= link_to 'Submit', '/chords/new'
+	=render "main/footer-black"
 
 :javascript
 	$(document).ready(function() {
