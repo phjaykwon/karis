@@ -4,6 +4,7 @@
 	=render "main/header-black"
 
 	.chord-content
+		BETA: please refresh the page by pressing ctrl (cmd) + r
 		.section_search
 			=form_tag(main_index_path, method: :get) do
 				=text_field_tag :search, "", class: 'search-field-black', placeholder: "I think you need to search for an easier song..."
@@ -68,4 +69,57 @@
 	$(document).ready(function() {
 		var new_content = ChordsUtils.updateContent($("pre").text(), #{@valid_chords});
 		$("pre").html(new_content);
+
+		$(".transpose-up").on("click",function(){
+		$("span.chord").text(function(i,txt) {
+		$(this).text(ChordsUtils.transposeChord(txt, 1));
+		});
+		});
+
+
+		$(".transpose-down").on("click",function(){
+		$("span.chord").text(function(i,txt){
+		$(this).text(ChordsUtils.transposeChord(txt, -1));
+		});
+		});
+
+		$(".transpose-plus").click(function() {
+		$("pre").css("font-size","+=1");
+		});
+
+		$(".transpose-minus").click(function() {
+		$("pre").css("font-size","-=1");
+		});
+
+		$(".favorites.transpose-is-favorited").on("click", function() {
+		var chord_id = parseInt($('#chord_id').val());
+		if ($('.favorites.function-text').text().trim() === "Favorite") {
+		$.ajax({
+		type: "POST",
+		url: '/favorites/create',
+		data: {
+		'favorite': {
+		'chord_id': chord_id
+		}
+		},
+		success: function() {
+		$('.favorites.function-text').text("Un-favorite");
+		}
+		});
+		} else {
+		$.ajax({
+		type: "DELETE",
+		url: '/favorites/remove',
+		data: {
+		'favorite': {
+		'chord_id': chord_id
+		}
+		},
+		success: function() {
+		$('.favorites.function-text').text("Favorite");
+		}
+		});
+		}
+		});
+
 	});
