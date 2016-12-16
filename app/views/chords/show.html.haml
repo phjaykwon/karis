@@ -30,7 +30,6 @@
 							%ul.favorites.transpose-is-favorited#transpose-item
 								.icon-container
 									=image_tag "favorite.png", class: "icon"
-
 						-else
 							%ul.favorites.function-text
 								Favorite
@@ -63,17 +62,7 @@
 					= preserve do
 						= @chord.content
 
-	.footer.footer-chord
-		.footer-container
-			.footer-logo
-
-			%ul.footer-list
-				%li.footer-list-item
-					= link_to 'About', '/about'
-				%li.footer-list-item
-					= link_to 'Blog', '/blog'
-				%li.footer-list-item.white
-					= link_to 'Submit', '/chords/new'
+	=render "main/footer-black"
 
 :javascript
 	$(document).ready(function() {
