@@ -15,9 +15,9 @@
 @dChord = Chord.create! :title => 'Chord4', :content => 'chord d asdfsda', :video_url => 'urlother'
 @eChord = Chord.create! :title => 'Chord5', :content => 'chord e asdf;lasgasg', :video_url => 'urlother'
 #r = Role.add_role()
-@aFavorite = Favorite.create! :user_id => @aUser.id, :chord_id => @dChord.id
-@bFavorite = Favorite.create! :user_id => @aUser.id, :chord_id => @eChord.id
-@cFavorite = Favorite.create! :user_id => @aUser.id, :chord_id => @cChord.id
+@aFavorite = Favorite.create! :user_id => @aUser.id, :chord_id => @dChord.id, :created_at => Time.now
+@bFavorite = Favorite.create! :user_id => @aUser.id, :chord_id => @eChord.id, :created_at => Time.now
+@cFavorite = Favorite.create! :user_id => @aUser.id, :chord_id => @cChord.id, :created_at => Time.now
 
 @aUser.chords << @aChord
 @aUser.chords << @bChord

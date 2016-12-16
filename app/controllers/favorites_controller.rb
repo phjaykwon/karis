@@ -28,7 +28,7 @@ class FavoritesController < ApplicationController
 		else
 			@id = current_user.id
 			@favorites = current_user.favorites
-			@chord_ids = @favorites.map(&:chord_id)
+			@chord_ids = @favorites.sort_by(&:created_at).map(&:chord_id)
 			@chords = []
 			for c_id in @chord_ids
 				# TODO: error checking to see if this is valid chord

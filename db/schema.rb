@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161027053003) do
+ActiveRecord::Schema.define(version: 20161216010857) do
 
   create_table "artists", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -31,8 +31,10 @@ ActiveRecord::Schema.define(version: 20161027053003) do
   end
 
   create_table "favorites", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "chord_id"
+    t.integer  "user_id"
+    t.integer  "chord_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.index ["user_id", "chord_id"], name: "index_favorites_on_user_id_and_chord_id"
   end
 
