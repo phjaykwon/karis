@@ -1,8 +1,11 @@
 
 $(document).ready(function(){
 
-
+// let's figure out a way to execute this JS right on page load.
+/*
+      console.log("HITTING CHORDS EVENTS");
       $(".transpose-up").on("click",function(){
+        console.log("WTF");
             $("span.chord").text(function(i,txt) {
                   $(this).text(ChordsUtils.transposeChord(txt, 1));
             });
@@ -53,5 +56,5 @@ $(document).ready(function(){
           });
         }
       });
-
+*/
 });
