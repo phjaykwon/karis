@@ -52,6 +52,10 @@ class FavoritesController < ApplicationController
 			@existing_favorite = Favorite.where(chord_id: @c_id, user_id: current_user.id)
 			if !@existing_favorite.nil? && !@existing_favorite.first().nil?
 				Favorite.destroy(@existing_favorite)
+
+				if (!params[:from].nil? && params[:from] == 'index')
+					redirect_to favorites_path
+				end
 			end
 		end
 	end

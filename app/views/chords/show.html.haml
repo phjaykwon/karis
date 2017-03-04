@@ -4,7 +4,6 @@
 	=render "main/header-black"
 
 	.chord-content
-		BETA: please refresh the page by pressing ctrl (cmd) + r
 		.section_search
 			=form_tag(main_index_path, method: :get) do
 				=text_field_tag :search, "", class: 'search-field-black', placeholder: "I think you need to search for an easier song..."
@@ -29,13 +28,13 @@
 							%ul.favorites.function-text
 								Un-Favorite
 							%ul.favorites.transpose-is-favorited#transpose-item
-								.icon-container
+								.icon-container-favorite
 									=image_tag "favorite.png", class: "icon"
 						-else
 							%ul.favorites.function-text
 								Favorite
 							%ul.favorites.transpose-is-favorited#transpose-item
-								.icon-container
+								.icon-container-favorite
 									=image_tag "favorite.png", class: "icon"
 
 						%ul.function-text
@@ -55,6 +54,22 @@
 						%ul.transpose-minus#transpose-item
 							.icon-container
 								=image_tag "minus.png", class: "icon"
+
+			/ .functions
+			/ 	.transpose
+			/ 		= hidden_field_tag 'chord_id', @chord.id
+			/ 		%ul
+			/ 			%ul.function-text
+			/ 				Auto-scroll
+			/ 			%ul.transpose-auto#transpose-item
+			/ 				.icon-container
+			/ 					=image_tag "plus.png", class: "icon"
+			/ 			%ul.transpose-auto#transpose-item
+			/ 				.icon-container
+			/ 					=image_tag "plus.png", class: "icon"
+			/ 			%ul.transpose-auto#transpose-item
+			/ 				.icon-container
+			/ 					=image_tag "plus.png", class: "icon"
 
 
 		.main
@@ -91,6 +106,12 @@
 			$("pre").css("font-size","-=1");
 		});
 
+		$(".transpose-auto").click(function() {
+			$('body,html').animate({scrollTop: $(document).height() }, 60000); 
+		});
+
+
+
 		$(".favorites.transpose-is-favorited").on("click", function() {
 			var chord_id = parseInt($('#chord_id').val());
 			if ($('.favorites.function-text').text().trim() === "Favorite") {
@@ -103,7 +124,8 @@
 						}
 					},
 					success: function() {
-						$('.favorites.function-text').text("Un-favorite");
+						$('.favorites.function-text').text("Un-Favorite");
+						$('.icon-container-favorite').css("background-color", "rgba(103, 167, 255, 0.54)");
 					}
 				});
 			} else {
@@ -117,6 +139,7 @@
 					},
 					success: function() {
 						$('.favorites.function-text').text("Favorite");
+						$('.icon-container-favorite').css("background-color", "#c7c7c7");
 					}
 				});
 			}

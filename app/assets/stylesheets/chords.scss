@@ -179,7 +179,21 @@ h1 {
 }
 
 .icon-container:hover {
-	background-color: #67a7ff;
+	background-color: rgba(103, 167, 255, 0.54);
+	-webkit-transition-duration: .3s;
+}
+
+.icon-container-favorite {
+	height: 26px;
+	padding: 1px;
+    display: inline-block;
+    background-color: #c7c7c7;
+    border-radius: 25px 25px 25px 25px;
+    cursor: pointer; cursor: hand;
+}
+
+.icon-container-favorite:hover {
+	background-color: rgba(103, 167, 255, 0.54);
 	-webkit-transition-duration: .3s;
 }
 
@@ -238,7 +252,7 @@ h1 {
 pre {
 	letter-spacing: -1.3px;
 	font-size: 14px;
-	font-family: Courier New, Courier, Monospace;
+	font-family: Andale Mono, Courier New, Monospace;
 }
 
 span.chord {

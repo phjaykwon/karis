@@ -4,8 +4,8 @@
 
 .about-description {
 	display: inline-block;
-	width: 360px;
-	padding-top: 20px;
+	width: 480px;
+	padding: 20px 0px;
 
 }
 
@@ -34,12 +34,18 @@
 	background-image: image-url('eric.jpeg');
 }
 
-.headshot_kevin {
-	background-image: image-url('kevin.jpeg');
-}
 
 .about-member {
 	font-size: 22px;
 	color: gray;
 	line-height: 36px;
+}
+
+.about-linkedin {
+	padding-top: 4px;
+}
+
+.about-linkedin a {
+	color: #66b2ff;
+	font-weight: 300;
 }

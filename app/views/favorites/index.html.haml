@@ -1,7 +1,7 @@
 =render "main/header"
 
 .title_big.section_medium-top-padding
-	Showing favorite chords 
+	Favorite chords 
 
 .section_results
 	- @chords.each do |chord|
@@ -9,6 +9,11 @@
 			= link_to chord.title, chord_path(:id => chord.id)
 			\-
 			= link_to chord.artist.name, chord_path(:id => chord.id)
+			.search_actions
+				= link_to 'View', chord_path(:id => chord.id)
+				.link_red
+					= link_to 'Unfavorite', favorites_remove_path(:favorite => {:chord_id => chord.id}, :from => 'index'), method: 'delete'
+
 
 
 =render "main/footer"
