@@ -24,18 +24,26 @@
 				.transpose
 					= hidden_field_tag 'chord_id', @chord.id
 					%ul
-						-if @chord.is_favorited(current_user)
-							%ul.favorites.function-text
-								Un-Favorite
-							%ul.favorites.transpose-is-favorited#transpose-item
-								.icon-container-favorite
-									=image_tag "favorite.png", class: "icon"
+						-if current_user
+							-if @chord.is_favorited(current_user)
+								%ul.favorites.function-text
+									Un-Favorite
+								%ul.favorites.transpose-is-favorited#transpose-item
+									.icon-container-favorite
+										=image_tag "favorite.png", class: "icon"
+							-else
+								%ul.favorites.function-text
+									Favorite
+								%ul.favorites.transpose-is-favorited#transpose-item
+									.icon-container-favorite
+										=image_tag "favorite.png", class: "icon"
 						-else
 							%ul.favorites.function-text
 								Favorite
 							%ul.favorites.transpose-is-favorited#transpose-item
-								.icon-container-favorite
-									=image_tag "favorite.png", class: "icon"
+								= link_to "/users/sign_in", :class => "icon-container-favorite" do
+									= image_tag "favorite.png", :class => "icon"
+
 
 						%ul.function-text
 							Transpose
