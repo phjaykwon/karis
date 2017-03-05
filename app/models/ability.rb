@@ -1,7 +1,7 @@
 class Ability
-  include CanCan::Ability
+    include CanCan::Ability
 
-  def initialize(user)
+    def initialize(user)
 
     #User types: admin, user, lurker (non-user)
 
@@ -53,5 +53,5 @@ class Ability
     #
     # See the wiki for details:
     # https://github.com/CanCanCommunity/cancancan/wiki/Defining-Abilities
-  end
+    end
 end
