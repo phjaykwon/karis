@@ -23,6 +23,10 @@
 	display: inline;
 	padding-right: 20px;
 	vertical-align: middle;
+
+	@media screen and (max-width: 400px) {
+    	float: right;
+  	}
 }
 
 .header li a {
